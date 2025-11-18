@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# 🛡️ Job Tinder: The AI-Powered Career Guardian
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📖 The Problem
+The modern hiring process is a **Black Box**. 
+1.  **ATS Obscurity:** Candidates are rejected by robots without knowing why.
+2.  **Hidden Toxicity:** Job descriptions hide "hustle culture" red flags under buzzwords like "fast-paced."
+3.  **Data asymmetry:** Candidates rarely know if a salary offer is fair until the very end.
 
-## Available Scripts
+## 💡 The Solution: Job Tinder
+We didn't just build a job board. We built a **Neural Matching Interface** that acts as a candidate's bodyguard. 
 
-In the project directory, you can run:
+Instead of opaque lists, we use a **physics-based card interface** that:
+* **Visualizes the "Why":** A radar chart breaks down your fit by Tech, Culture, and Pay.
+* **Intercepts Bad Decisions:** Our "Toxic Interceptor" physically prevents users from applying to roles with high burnout risk.
+* **Benchmarks Salary:** Real-time evaluation of offers against market standards (Underpaid vs. Top 1%).
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Key Technical Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. The "Neural" Interface (Canvas API)
+A living, breathing background simulation built with HTML5 Canvas. It represents the matching algorithm forming connections in real-time, creating an immersive "Cyberpunk/Glassmorphism" aesthetic that keeps users engaged.
 
-### `npm test`
+### 2. Toxicity Detection Engine (NLP Heuristics)
+We implemented a client-side NLP (Natural Language Processing) engine that scans job descriptions for semantic patterns.
+* **Red Flags:** "Rockstar", "Ninja", "Family", "Urgent".
+* **Logic:** If >2 flags are detected, the system calculates a **Burnout Probability Score** and triggers a modal warning, overriding the user's swipe action.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Interactive Match Visualization (Recharts)
+We moved beyond simple "Match %". Our **Poly-Dimensional Radar Chart** plots the job against the user's profile across 4 axes:
+* **Tech Stack:** Skill vector overlap.
+* **ATS Score:** Keyword density analysis.
+* **Culture Fit:** Vibe alignment (Chaos vs. Structure).
+* **Safety:** Inverse toxicity score.
 
-### `npm run build`
+### 4. Physics-Based Gestures (Framer Motion)
+A fully fluid swipe interface with:
+* 3D Tilt/Glare effects based on drag velocity.
+* Dynamic opacity mapping for decision stamps ("APPLY" / "PASS").
+* Haptic-style visual feedback on drag thresholds.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🏗️ Architecture & Engineering Decisions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Current State: High-Fidelity Simulation (Deterministic MVP)**
 
-### `npm run eject`
+To maximize the User Experience within the hackathon constraints, this project is architected as a **Simulation-First Prototype**.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Why Simulation?
+We chose to decouple the frontend from a live backend to demonstrate **edge-case behaviors** (like the Glitch Effect on toxic jobs) instantly, without network latency or API rate limits.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### The "Logic Engine"
+While the data is local, the **logic is real**. The application runs a client-side JavaScript engine that:
+1.  **Parses** raw text from job descriptions.
+2.  **Computes** weighted scores based on user profile vectors.
+3.  **Executes** conditional rendering based on salary/toxicity thresholds.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+*Transition to Production:* The architecture is designed so that the `EXPANDED_JOB_DATABASE` JSON object can be swapped for a `fetch()` call to a REST API (e.g., JSearch + OpenAI) with zero changes to the UI components.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Layer | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Core** | React + Vite | High-performance component rendering |
+| **Physics** | Framer Motion | Gesture handling, 3D transforms, and spring animations |
+| **Styling** | Tailwind CSS | Utility-first styling for the Glassmorphic UI |
+| **Data Viz** | Recharts | Rendering the Radar/Spider charts for match data |
+| **FX** | Canvas Confetti | Dopamine feedback loops on successful matches |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## ⚡ How to Run Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1.  **Clone the repo:**
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/job-tinder-demo.git](https://github.com/YOUR_USERNAME/job-tinder-demo.git)
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Ignite the engine:**
+    ```bash
+    npm run dev
+    ```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Built with LOVE for FEATURE CREEP CHAOS. Protecting engineers from toxic jobs, one swipe at a time.*
